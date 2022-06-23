@@ -2721,6 +2721,22 @@
     (pin "1" (uuid ad7f623f-d671-49cc-bf1c-2399c735e287))
   )
 
+  (symbol (lib_id "power:GNDA") (at 220.98 68.58 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 1608183c-7910-43a9-a0f7-77336bb08a03)
+    (property "Reference" "#PWR?" (id 0) (at 220.98 74.93 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GNDA" (id 1) (at 217.17 69.85 0))
+    (property "Footprint" "" (id 2) (at 220.98 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 220.98 68.58 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 488cbfff-06b2-4e9a-8915-1cd5a4d82b7e))
+  )
+
   (symbol (lib_id "power:+3.3VA") (at 218.44 88.9 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 16a83771-54eb-4e27-9647-e1fb03e39b7a)
@@ -3877,24 +3893,6 @@
     (pin "1" (uuid 99a51023-dcbc-4fea-ae09-aea1b138fd9a))
   )
 
-  (symbol (lib_id "power:Earth") (at 220.98 68.58 0) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
-    (uuid ded4a434-8dc3-4ae9-9c86-aa80321c8438)
-    (property "Reference" "#PWR040" (id 0) (at 220.98 74.93 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "Earth" (id 1) (at 220.98 72.39 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Footprint" "" (id 2) (at 220.98 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (id 3) (at 220.98 68.58 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 6eae5e6d-98c6-4906-b1e8-10b8f44b10c5))
-  )
-
   (symbol (lib_id "Device:C") (at 87.63 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid e3d6af00-77f1-4c69-9ae5-d5734fb144a9)
@@ -4236,9 +4234,6 @@
     (path "/01230fa0-4578-45ac-8c5b-58060a374bf9"
       (reference "#PWR039") (unit 1) (value "Earth") (footprint "")
     )
-    (path "/ded4a434-8dc3-4ae9-9c86-aa80321c8438"
-      (reference "#PWR040") (unit 1) (value "Earth") (footprint "")
-    )
     (path "/a693dd2a-10f5-49e8-8ed2-7ff749236d48"
       (reference "#PWR041") (unit 1) (value "+3.3V") (footprint "")
     )
@@ -4259,6 +4254,9 @@
     )
     (path "/57b273d9-d231-468b-a396-31c0db09458e"
       (reference "#PWR047") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/1608183c-7910-43a9-a0f7-77336bb08a03"
+      (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
     (path "/f1973fc8-15b6-4c53-87c0-78a3b2cf3358"
       (reference "C1") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
