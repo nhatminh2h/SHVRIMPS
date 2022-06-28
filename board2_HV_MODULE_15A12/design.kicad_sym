@@ -6,7 +6,7 @@
     (property "Value" "15A12" (id 1) (at 2.54 10.16 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (id 2) (at -11.43 8.89 0)
+    (property "Footprint" "Library:Advanced Energy 15A12P4" (id 2) (at -11.43 8.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at -11.43 8.89 0)
