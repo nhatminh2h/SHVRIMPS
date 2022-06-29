@@ -62,11 +62,11 @@
       35,
       36
     ],
-    "visible_layers": "7ffff7f_80000007",
+    "visible_layers": "fffffff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "revised_minh_design.kicad_prl",
+    "filename": "HV_Module_15A12.kicad_prl",
     "version": 3
   },
   "project": {
