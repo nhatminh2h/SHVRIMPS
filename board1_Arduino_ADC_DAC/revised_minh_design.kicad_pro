@@ -412,7 +412,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "output/revised_minh_design.STEP",
+      "step": "output/SHVRIMPS_DAQ.STEP",
       "vrml": ""
     },
     "page_layout_descr_file": ""
