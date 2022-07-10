@@ -1442,7 +1442,7 @@
   )
 
   (symbol (lib_id "Connector:Conn_01x01_Male") (at 143.51 77.47 90) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (in_bom no) (on_board yes) (fields_autoplaced)
     (uuid 88430386-ace4-41ce-8523-14488cdd7071)
     (property "Reference" "J2" (id 0) (at 144.78 75.5649 90)
       (effects (font (size 1.27 1.27)) (justify right))
