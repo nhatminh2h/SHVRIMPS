@@ -1,0 +1,6 @@
+Flask==1.1.2
+Flask_SocketIO==5.3.1
+numpy==1.22.4
+opencv_contrib_python==4.5.5.64
+paho_mqtt==1.6.1
+pybase64==1.2.3
