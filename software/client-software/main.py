@@ -8,9 +8,8 @@ import numpy as np
 import pybase64
 import cv2
 
-# ip_address = "10.42.0.198"
-
-ip_address = "0.0.0.0"
+ip_address = "10.42.0.198"
+# ip_address = "0.0.0.0"
 jpg_image = ""
 tp = 0
 N = 30

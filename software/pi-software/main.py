@@ -15,7 +15,9 @@ def on_message(client, userdata, msg):
 
 
 def run():
-    import serial
+    import picamera
+    import time
+    import io
     import paho.mqtt.client as mqtt
 
     ip_address = "0.0.0.0"
@@ -24,14 +26,28 @@ def run():
     client.on_message = on_message
     client.connect(ip_address, 1883, 60)
     client.loop_start()
-    
+    with picamera.PiCamera() as camera:
+        # let camera warm up
+        time.sleep(2)
 
+        camera.resolution = (640, 480)
+        camera.framerate = z20
 
-    while True:
-        with serial.Serial('/dev/ttyUSB0', 115200, timeout=1) as ser:
-            voltages = ser.readline()
-            client.publish("device/voltage_measurements", payload=voltages)
+        stream = io.BytesIO()
+        t = time.time()
+        for _ in camera.capture_continuous(stream, "jpeg", use_video_port=True):
+            # return current frame
+            # print("#")
+            stream.seek(0)
+            jpg = stream.read()
+            client.publish("device/feed", payload=jpg)
 
+            # reset stream for next frame
+            stream.seek(0)
+            stream.truncate()
+            tp = time.time()
+            dt = tp - t
+            t = tp
 
 
 if __name__ == "__main__":

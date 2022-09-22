@@ -10,8 +10,43 @@ const labels = [];
     labels: labels,
     datasets: [{
       label: 'channel 1',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgb(230,214,144)',
+      borderColor: 'rgb(230,214,144)',
+      data: [],
+    }, {
+      label: 'channel 2',
+      backgroundColor: 'rgb(155,017,030)',
+      borderColor: 'rgb(155,017,030)',
+      data: [],
+    }, {
+      label: 'channel 3',
+      backgroundColor: 'rgb(071,064,046)',
+      borderColor: 'rgb(071,064,046)',
+      data: [],
+    }, {
+      label: 'channel 4',
+      backgroundColor: 'rgb(044,085,069)',
+      borderColor: 'rgb(044,085,069)',
+      data: [],
+    }, {
+      label: 'channel 5',
+      backgroundColor: 'rgb(053,104,045)',
+      borderColor: 'rgb(053,104,045)',
+      data: [],
+    }, {
+      label: 'channel 6',
+      backgroundColor: 'rgb(255, 0, 0)',
+      borderColor: 'rgb(255, 0, 0)',
+      data: [],
+    },{
+      label: 'channel 7',
+      backgroundColor: 'rgb(0, 255, 0)',
+      borderColor: 'rgb(0, 255, 0)',
+      data: [],
+    }, {
+      label: 'channel 8',
+      backgroundColor: 'rgb(0,0,255)',
+      borderColor: 'rgb(0,0,255)',
       data: [],
     }]
   };

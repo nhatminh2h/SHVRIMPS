@@ -1,2 +1,0 @@
-paho_mqtt==1.6.1
-picamera==1.13
