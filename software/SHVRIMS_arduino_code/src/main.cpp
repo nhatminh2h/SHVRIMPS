@@ -16,9 +16,11 @@ uint32_t clockFreq = 2000000;
 uint16_t fullScaleDAC = 65535;
 uint16_t n = 16;
 float maxV = 15000.;
-float desiredVoltage = 3000.;
+float desiredVoltage = 2000.;
 
 uint32_t desiredVoltageInScale = uint32_t(float(fullScaleDAC) * desiredVoltage / maxV);
+uint32_t desiredVoltageInScale2 = uint32_t(float(fullScaleDAC) * 2000 / maxV);
+
 
 // 16 bit, 128 points normalized Look Up Table
 float normalizedSineLUT[] = {5.00007630e-01, 5.24528878e-01, 5.49004349e-01, 5.73357748e-01, 5.97543297e-01, 6.21484703e-01, 6.45136187e-01, 6.68451972e-01,
@@ -89,7 +91,7 @@ void loop() {
       writetoDAC(messagetoDAC);
       messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_B, normalizedSineLUT[(i + n) % LUTSize] * desiredVoltageInScale);
       writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_C, normalizedSineLUT[(i + 2*n) % LUTSize] * desiredVoltageInScale);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_C, normalizedSineLUT[(i + 2*n) % LUTSize] * desiredVoltageInScale2);
       writetoDAC(messagetoDAC);
       messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_D, normalizedSineLUT[(i + 3*n) % LUTSize] * desiredVoltageInScale);
       writetoDAC(messagetoDAC);
