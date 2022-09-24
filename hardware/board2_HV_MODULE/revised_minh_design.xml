@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/user/hvawg/board2_HV_MODULE/revised_minh_design.kicad_sch</source>
-    <date>Thursday, 23 June 2022 at 14:21:06</date>
+    <date>Thursday, 30 June 2022 at 15:07:25</date>
     <tool>Eeschema (6.0.5-0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -98,7 +98,7 @@
     </comp>
     <comp ref="R2">
       <value>4.7k</value>
-      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="revised_minh_design.kicad_sch"/>
@@ -125,7 +125,7 @@
     </comp>
     <comp ref="R5">
       <value>2K</value>
-      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="revised_minh_design.kicad_sch"/>

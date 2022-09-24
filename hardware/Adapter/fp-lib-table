@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/revised_minh_design-backups/Library.pretty")(options "")(descr ""))
-)
