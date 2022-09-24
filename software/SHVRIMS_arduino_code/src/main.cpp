@@ -16,9 +16,15 @@ uint32_t clockFreq = 2000000;
 uint16_t fullScaleDAC = 65535;
 uint16_t n = 16;
 float maxV = 15000.;
-float desiredVoltage = 2000.;
+float desiredVoltage = 2400.;
 
-uint32_t desiredVoltageInScale = uint32_t(float(fullScaleDAC) * desiredVoltage / maxV);
+
+inline uint32_t DesiredVoltageInScale(float voltage)
+{
+  return uint32_t(float(fullScaleDAC) * voltage / maxV);
+}
+
+uint32_t desiredVoltageInScale =  DesiredVoltageInScale(2400.);
 uint32_t desiredVoltageInScale2 = uint32_t(float(fullScaleDAC) * 2000 / maxV);
 
 
@@ -87,16 +93,23 @@ void loop() {
     // put your main code here, to run repeatedly:
     for (int i = 0; i < LUTSize; ++i)
     {
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_A, normalizedSineLUT[i] * desiredVoltageInScale);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_G, normalizedSineLUT[(i) % LUTSize] * desiredVoltageInScale);
       writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_B, normalizedSineLUT[(i + n) % LUTSize] * desiredVoltageInScale);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_E, normalizedSineLUT[(i + 1 * n) % LUTSize] * desiredVoltageInScale);
       writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_C, normalizedSineLUT[(i + 2*n) % LUTSize] * desiredVoltageInScale2);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_A, normalizedSineLUT[(i + 2 * n)  % LUTSize] * desiredVoltageInScale2);
       writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_D, normalizedSineLUT[(i + 3*n) % LUTSize] * desiredVoltageInScale);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_C, normalizedSineLUT[(i + 3 * n)  % LUTSize] * desiredVoltageInScale);
       writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_E, normalizedSineLUT[(i + 4*n) % LUTSize] * desiredVoltageInScale);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_H, normalizedSineLUT[(i + 4 * n)  % LUTSize] * desiredVoltageInScale);
       writetoDAC(messagetoDAC);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_F, normalizedSineLUT[(i + 5 * n)  % LUTSize] * desiredVoltageInScale);
+      writetoDAC(messagetoDAC);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_D, normalizedSineLUT[(i + 6 * n)  % LUTSize] * desiredVoltageInScale);
+      writetoDAC(messagetoDAC);
+      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_B, normalizedSineLUT[(i + 7 * n)  % LUTSize] * desiredVoltageInScale);
+      writetoDAC(messagetoDAC);
+      
       delayMicroseconds(epsilonUs);
     }    
 }
