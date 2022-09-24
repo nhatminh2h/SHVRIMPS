@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "(6.0.5-0)"
     },
-    "CreationDate": "2022-06-25T17:27:44+01:00"
+    "CreationDate": "2022-06-30T10:43:35+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -43,54 +43,9 @@
   ],
   "FilesAttributes": [
     {
-      "Path": "revised_minh_design-F_Cu.gbr",
-      "FileFunction": "Copper,L1,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "revised_minh_design-In1_Cu.gbr",
-      "FileFunction": "Copper,L2,Inr",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "revised_minh_design-In2_Cu.gbr",
-      "FileFunction": "Copper,L3,Inr",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "revised_minh_design-B_Cu.gbr",
-      "FileFunction": "Copper,L4,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
       "Path": "revised_minh_design-F_Paste.gbr",
       "FileFunction": "SolderPaste,Top",
       "FilePolarity": "Positive"
-    },
-    {
-      "Path": "revised_minh_design-B_Paste.gbr",
-      "FileFunction": "SolderPaste,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "revised_minh_design-F_Silkscreen.gbr",
-      "FileFunction": "Legend,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "revised_minh_design-B_Silkscreen.gbr",
-      "FileFunction": "Legend,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "revised_minh_design-F_Mask.gbr",
-      "FileFunction": "SolderMask,Top",
-      "FilePolarity": "Negative"
-    },
-    {
-      "Path": "revised_minh_design-B_Mask.gbr",
-      "FileFunction": "SolderMask,Bot",
-      "FilePolarity": "Negative"
     },
     {
       "Path": "revised_minh_design-Edge_Cuts.gbr",

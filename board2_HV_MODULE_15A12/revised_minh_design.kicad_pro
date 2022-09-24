@@ -401,7 +401,7 @@
       "idf": "",
       "netlist": "../../../../",
       "specctra_dsn": "",
-      "step": "",
+      "step": "output/SHVRIMPS_15A12.STEP",
       "vrml": ""
     },
     "page_layout_descr_file": ""

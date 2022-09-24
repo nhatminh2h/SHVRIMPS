@@ -60,15 +60,7 @@
         "silk_over_copper|50038000|48514000|4f7c1281-6387-4f98-86c6-58bb54453856|6392b4c0-5b44-440b-b581-31f433778a89",
         "silk_over_copper|50038000|65786000|4f7c1281-6387-4f98-86c6-58bb54453856|a45150d1-70ca-4b22-beca-15e924d687ed",
         "silk_over_copper|50038000|76454000|4f7c1281-6387-4f98-86c6-58bb54453856|5f37b94f-5f3c-4a14-b17d-1e015906479d",
-        "silk_over_copper|51089000|80274376|17849f86-1849-4e1d-b5f6-dd51ca9b384f|09663942-9493-4832-bd7b-936dff48580e",
-        "silk_over_copper|51811254|80992500|17849f86-1849-4e1d-b5f6-dd51ca9b384f|228dcf6b-cf83-4a6c-bf45-092a2b4d524a",
-        "silk_over_copper|54000000|78784520|aee1da0b-9394-4fce-82dc-4a010dc8949d|5eb44e47-6059-4904-b1ab-b96904d4a947",
-        "silk_over_copper|54000000|78902615|05ede625-2ef7-48f1-8f8f-006892ecd294|5eb44e47-6059-4904-b1ab-b96904d4a947",
-        "silk_over_copper|54000000|79020710|79439999-9fdb-4517-9dfd-ab3b28c3d3fd|5eb44e47-6059-4904-b1ab-b96904d4a947",
-        "silk_over_copper|54000000|79138805|6cf7a091-758e-4f2e-b616-9da03ea895f4|5eb44e47-6059-4904-b1ab-b96904d4a947",
-        "silk_over_copper|54000000|79256900|e9949a59-b7c7-472a-8df9-ee37dece8628|5eb44e47-6059-4904-b1ab-b96904d4a947",
-        "silk_over_copper|54000000|79375000|65ab444d-17f5-460a-b07f-1bf9a4aadc99|5eb44e47-6059-4904-b1ab-b96904d4a947",
-        "silk_overlap|51940000|65786000|cda69f0f-20a5-4719-8b66-30427766478f|a45150d1-70ca-4b22-beca-15e924d687ed"
+        "silk_overlap|51940000|65786000|a45150d1-70ca-4b22-beca-15e924d687ed|cda69f0f-20a5-4719-8b66-30427766478f"
       ],
       "meta": {
         "version": 2
@@ -420,7 +412,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "output/SHVRIMPS_DAQ.STEP",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -457,7 +449,7 @@
       "workbook_filename": ""
     },
     "page_layout_descr_file": "",
-    "plot_directory": "output",
+    "plot_directory": "output/",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
     "subpart_first_id": 65,
