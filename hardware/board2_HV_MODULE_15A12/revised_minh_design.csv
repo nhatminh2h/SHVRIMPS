@@ -1,20 +1,19 @@
-"Source:","/Users/user/hvawg/board2_HV_MODULE_15A12/revised_minh_design.kicad_sch"
-"Date:","Thursday, 30 June 2022 at 15:19:40"
-"Tool:","Eeschema (6.0.5-0)"
-"Generator:","/Applications/KiCad/KiCad.app/Contents/SharedSupport/plugins/bom_csv_grouped_by_value_with_fp.py"
-"Component Count:","18"
-"Ref","Qnty","Value","Cmp name","Footprint","Description","Vendor"
-"C1, C2, ","2","0.1uF","C","Capacitor_THT:C_Disc_D6.0mm_W2.5mm_P5.00mm","Unpolarized capacitor",""
-"C3, ","1","0.1uF","C","Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm","Unpolarized capacitor",""
-"D1, ","1","TZX3V6A-TR","D_Zener","Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal","Zener diode",""
-"D2, ","1","LED","LED","LED_THT:LED_D3.0mm_Clear","Light emitting diode",""
-"J1, ","1","Conn_01x07_Male","Conn_02x05_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical","Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",""
-"J3, ","1","Conn_01x02_Male","Conn_01x02_Male","Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical","Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",""
-"R1, R3, ","2","10k","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","Resistor",""
-"R2, ","1","4.7k","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","Resistor",""
-"R4, ","1","1K","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal","Resistor",""
-"R5, R7, ","2","2K","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","Resistor",""
-"R6, R8, ","2","1.1K","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","Resistor",""
-"U1, ","1","LM7805_TO220","LM7805_TO220","Package_TO_SOT_THT:TO-220-3_Vertical","Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220",""
-"U2, ","1","NE5532","NE5532","Package_DIP:DIP-8_W7.62mm","Dual Low-Noise Operational Amplifiers, DIP-8/SOIC-8",""
-"U4, ","1","15A12","15A12","Library:Advanced Energy 15A12P4","",""
+NOTE: The following BOM is for ONE high voltage module,,,,,,,,
+Ref,Qnty,Value,Description,Vendor,Manufacture number,Alternative Option,Unit Price,Total Price
+"C1, C2, C3",3,0.1uF,Unpolarized capacitor,https://www.mouser.co.uk/ProductDetail/Vishay-BC-Components/K104M10X7RF5UH5?qs=uwenMUmGrtfrBFUqL2dLRw%3D%3D,,,£0.19 ,0.579
+"D1, ",1,TZX3V6A-TR,Zener diode,https://www.mouser.co.uk/ProductDetail/Vishay-Semiconductors/ZPY16-TR?qs=6Fe8ASSgjNtFiGayzk%2F7%252BQ%3D%3D,,,0.319,0.319
+"D2, ",1,LED,Light emitting diode,https://www.mouser.co.uk/ProductDetail/VCC/VAOL-3MAE2?qs=io7aH2hdVh6UJW4IWVOfMg%3D%3D,,,£0.46 ,0.462
+"J1, ",1,Conn_02x05_Male,"Single row, 02x05, 2.54mm pitch",https://www.mouser.co.uk/ProductDetail/Molex/90142-0010?qs=BLN8Q0P37WbAKoqIAY0hgw%3D%3D,90142-0010,,£0.76 ,0.756
+J1-,1,Conn_02x05_Female,Receptacle,https://www.mouser.co.uk/ProductDetail/Molex/90130-1210?qs=FqTglUE30jKws6eRab4Phg%3D%3D,90130-1210,,£1.81 ,1.81
+"J3, ",1,Conn_01x02_Male,"Single row, 01x02, 2.54mm pitch",https://www.mouser.co.uk/ProductDetail/Molex/90136-1202?qs=zF2Np9wwC%252B7fqKXQTHeKiQ%3D%3D,90136-1202,,£1.14 ,1.14
+J3-,1,Conn_01x02_Female,Receptacle,https://www.mouser.co.uk/ProductDetail/Molex/90156-0142?qs=jBHU5RPckUotmv8DXiRxUw%3D%3D,90156-0142,,£0.39 ,0.386
+"R1, ",1,4.7k,Resistor,https://www.mouser.co.uk/ProductDetail/YAGEO/MFR-25FBF52-4K7?qs=oAGoVhmvjhyEuU2iU0uA4w%3D%3D,MFR-25FBF52-4K7,,0.025,0.025
+"R2, ",2,2k,Resistor,https://www.mouser.co.uk/ProductDetail/YAGEO/MFR-12FTF52-2K?qs=oAGoVhmvjhwaGCFyQGkulg%3D%3D,MFR-25FBF52-4K7,,0.021,0.042
+"R3, ",1,10k,Resistor,https://www.mouser.co.uk/ProductDetail/YAGEO/MFR-12FTF52-10K?qs=oAGoVhmvjhzLlUYKKBtdYQ%3D%3D,MFR-12FTF52-10K,,0.084,0.084
+"R5, R7, ",2,390k,Resistor,https://www.mouser.co.uk/ProductDetail/Vishay-BC-Components/HVR2500003903FR500?qs=7DG%2Fna1Fp6tcZrbH7PbgIQ%3D%3D,,,0.353,0.706
+"R6, R8, ",2,110k,Resistor,https://www.mouser.co.uk/ProductDetail/Vishay-Dale/CPF110K000FKEE6?qs=sGAEpiMZZMukHu%252BjC5l7YSFVIUTBxCz2U0RJEG%2FUPqw%3D,,,£0.66 ,1.328
+"U1, ",1,LM7809_TO220,"Positive 1A 35V Linear Regulator, Fixed Output 9V, TO-220-3",https://www.mouser.co.uk/ProductDetail/STMicroelectronics/L7809ABV?qs=arR7071FstcxVp1H1MGQ%2Fw%3D%3D,L7809ABV,,0.655,0.655
+"U2, ",1,LM358,"Dual Low-Noise Operational Amplifiers, DIP-8",https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM358AP?qs=Zu35EjizYSShld7Gr9Muww%3D%3D,LM358AP,,0.353,0.353
+"U3, ",1,15A12,High Voltage DC-DC module,https://www.mouser.co.uk/ProductDetail/Advanced-Energy/15A12-P4?qs=BZBei1rCqCD%252BiPNKsMykyg%3D%3D,,,£433.09 ,433.09
+,1,PCB,2-Layer PCB,JLC-PCB,,,,0
+,,,,,,,Total,441.735
