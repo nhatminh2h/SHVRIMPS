@@ -45,7 +45,7 @@ def on_message(client, userdata, msg):
 
         # process
         # jpg_image = f(jpg_image)
-        print(f"fps : {1 / avg} Got data")
+        # print(f"fps : {1 / avg} Got data")
 
         # encode to base64
         encoded = pybase64.b64encode(jpg_image)

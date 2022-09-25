@@ -90,10 +90,9 @@ function plot(data)
     measurements = data['voltage_measurements']; 
     for (let i = 0; i < measurements.length; ++i)
     {
-        myChart.data.datasets[0].data.push(measurements[i]);
-        myChart.data.labels.push(t)
+        myChart.data.datasets[i].data.push(measurements[i]);
     }
-
+    myChart.data.labels.push(t);
 
     //if (myChart.data.datasets[0].data.length == maxDataPoints)
     //{
