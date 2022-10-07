@@ -1,4 +1,4 @@
-#SHVRIMPS: Synchronised High-Voltage aRbItrary Modular Power Supply
+# SHVRIMPS: Synchronised High-Voltage aRbItrary Modular Power Supply
 
 SHVRIMPS is a high-voltage generator and optical imaging setup, capable of
 • Outputting arbitrary high-voltage waveforms with an amplitude of 15 kV and a rise time less than 10 ms for load resistances below 8 MΩ.
