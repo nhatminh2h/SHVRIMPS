@@ -17,7 +17,7 @@ uint32_t clockFreq = 2000000;
 uint16_t fullScaleDAC = 65535;
 uint16_t n = 16;
 float maxV = 15000.;
-float desiredVoltage = 2400.;
+float desiredVoltage = 1000.;
 
 
 inline uint32_t DesiredVoltageInScale(float voltage)
@@ -28,10 +28,8 @@ inline uint32_t DesiredVoltageInScale(float voltage)
 uint32_t desiredVoltageInScale =  DesiredVoltageInScale(2400.);
 uint32_t desiredVoltageInScale2 = uint32_t(float(fullScaleDAC) * 2000 / maxV);
 
-
 // 16 bit, 128 points normalized Look Up Table
-
-uint16_t LUTSize = sizeof(normalizedSineLUT) / sizeof(float);
+uint16_t LUTSize = sizeof(SineWaveformNormalizedLUT) / sizeof(float);
 
 // SPI Settings for DAC and ADCs
 SPISettings DACsettings(clockFreq, MSBFIRST, SPI_MODE1); 
@@ -43,6 +41,7 @@ uint32_t epsilonUs = 1000000. / (float(LUTSize) * desiredFrequency);
 
 
 // Functions
+
 void writetoDAC(uint32_t message){
   digitalWrite(DAC_CS, LOW);
   SPI.beginTransaction(DACsettings);
@@ -53,6 +52,37 @@ void writetoDAC(uint32_t message){
   SPI.endTransaction();
   digitalWrite(DAC_CS, HIGH);
 }
+
+int measureVoltage(int i){
+  return analogRead(i);
+}
+
+//Waveforms
+
+void sinewave(){
+    for (int i = 0; i < LUTSize; ++i)
+  {
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_G, SineWaveformNormalizedLUT[(i) % LUTSize] * desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_E, SineWaveformNormalizedLUT[(i + 1 * n) % LUTSize] * desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_A, SineWaveformNormalizedLUT[(i + 2 * n)  % LUTSize] * desiredVoltageInScale2);
+    writetoDAC(messagetoDAC);
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_C, SineWaveformNormalizedLUT[(i + 3 * n)  % LUTSize] * desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_H, SineWaveformNormalizedLUT[(i + 4 * n)  % LUTSize] * desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_F, SineWaveformNormalizedLUT[(i + 5 * n)  % LUTSize] * desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_D, SineWaveformNormalizedLUT[(i + 6 * n)  % LUTSize] * desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_B, SineWaveformNormalizedLUT[(i + 7 * n)  % LUTSize] * desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    
+    delayMicroseconds(epsilonUs);
+  }    
+}
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -73,28 +103,23 @@ void setup() {
   delay(100);
 }
 
+int count = 0;
+
 void loop() {
-    Serial.println(epsilonUs);
+    //Serial.println(epsilonUs);
     // put your main code here, to run repeatedly:
-    for (int i = 0; i < LUTSize; ++i)
-    {
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_G, normalizedSineLUT[(i) % LUTSize] * desiredVoltageInScale);
-      writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_E, normalizedSineLUT[(i + 1 * n) % LUTSize] * desiredVoltageInScale);
-      writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_A, normalizedSineLUT[(i + 2 * n)  % LUTSize] * desiredVoltageInScale2);
-      writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_C, normalizedSineLUT[(i + 3 * n)  % LUTSize] * desiredVoltageInScale);
-      writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_H, normalizedSineLUT[(i + 4 * n)  % LUTSize] * desiredVoltageInScale);
-      writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_F, normalizedSineLUT[(i + 5 * n)  % LUTSize] * desiredVoltageInScale);
-      writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_D, normalizedSineLUT[(i + 6 * n)  % LUTSize] * desiredVoltageInScale);
-      writetoDAC(messagetoDAC);
-      messagetoDAC = DAC8568_Write_Input_Reg_And_Update_All(CH_B, normalizedSineLUT[(i + 7 * n)  % LUTSize] * desiredVoltageInScale);
-      writetoDAC(messagetoDAC);
-      
-      delayMicroseconds(epsilonUs);
-    }    
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_Single(CH_C, SquareWaveEvenDutyCycleNormalizedLUT[1]* desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    delay(5000);
+    Serial.print("2000 V - Measured Voltage: ");
+    Serial.println(measureVoltage(A7)*3.3/4096, 4);
+    delay(1000);
+
+    messagetoDAC = DAC8568_Write_Input_Reg_And_Update_Single(CH_C, SquareWaveEvenDutyCycleNormalizedLUT[0]* desiredVoltageInScale);
+    writetoDAC(messagetoDAC);
+    delay(5000);
+    Serial.print("0 V - Measured Voltage: ");
+    Serial.println(measureVoltage(A7)*3.3/4096, 4);
+    delay(1000);
+    
 }
